@@ -6,5 +6,5 @@ The Diagrams folder contains network diagrams illustrating the architecture crea
 
 The Ansible folder contains scripts that are used to configure cloud servers with different docker containers.
 
-The Linux folder contains some basic scripts that aid with Linux commands such as grep.
+The LinuxScripts folder contains some basic scripts that aid with Linux commands such as grep.
 
