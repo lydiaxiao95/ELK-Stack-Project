@@ -29,10 +29,11 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available and reliable, in addition to restricting traffic to the network.
 - Load balancing protects the website and its servers, as it helps distribute traffic evenly and mitigates possible DDoS attacks. 
+Additionally, using a jump box creates a secure gateway or environment for users to connect to before doing administrative tasks on the other servers or not as secure environments.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the server and system application.
 - Filebeat watches for log events and log files that we have specified.
-- _TODO: What does Metricbeat record?_
+- Metricbeat collects machine metrics, which includes CPU and uptime.
 
 The configuration details of each machine may be found below.
 
@@ -83,7 +84,7 @@ We have installed the following Beats on these machines:
 - Filebeat, Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- _Filebeat collects data about the filesystem through traffic. Metricbeat collects data showing machine metrics.
+- Filebeat collects data about the filesystem through traffic. Metricbeat collects data showing machine metrics.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
@@ -93,7 +94,7 @@ SSH into the control node and follow the steps below:
 - Update the hosts file to include webservers IP addresses and root user as sysadmin.
 - Run the playbook, and navigate to ELK Server to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
+Note:
 - install-elk.yml is the playbook that we copy it into /etc/ansible/.
 - To make Ansible run the playbook on a specific machine, we would have to update the ansible.cfg file. How do I specify which machine to install the ELK server on versus which to install Filebeat on?
 - In order to check that the ELK server is running, navigate to URL http://10.1.0.6:5601/app/kibana
